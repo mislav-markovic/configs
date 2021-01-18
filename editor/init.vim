@@ -1,7 +1,7 @@
 let mapleader = "\<Space>"
 
 " =============================================================================
-" # PLUGINS
+" # PLUGINS (vim-plug)
 " =============================================================================
 call plug#begin()
 
@@ -12,6 +12,8 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'justinmk/vim-sneak'
 Plug 'tpope/vim-fugitive'
 Plug 'jiangmiao/auto-pairs'
+" Surround any text object
+Plug 'machakann/vim-sandwich'
 
 " GUI enhancements
 Plug 'itchyny/lightline.vim'
@@ -19,6 +21,8 @@ Plug 'machakann/vim-highlightedyank'
 Plug 'andymass/vim-matchup'
 Plug 'phanviet/vim-monokai-pro'
 
+" Ripgrep plugin for vim
+Plug 'jremmen/vim-ripgrep'
 " Fuzzy finder
 Plug 'airblade/vim-rooter'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
@@ -90,6 +94,11 @@ if executable('rg')
 	set grepprg=rg\ --no-heading\ --vimgrep
 	set grepformat=%f:%l:%c:%m
 endif
+
+" Replace f search with vim-sneak (one character search with `f` won't work
+" anymore)
+map f <Plug>Sneak_s
+map F <Plug>Sneak_S
 
 " Open hotkeys
 map <C-p> :Files<CR>

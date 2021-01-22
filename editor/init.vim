@@ -420,7 +420,6 @@ if has("autocmd")
 endif
 
 " Follow Rust code style rules
-au Filetype rust source ~/.config/nvim/scripts/spacetab.vim
 au Filetype rust set colorcolumn=100
 
 " Help filetype detection

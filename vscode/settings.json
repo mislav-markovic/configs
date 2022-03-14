@@ -1,0 +1,142 @@
+{
+  "workbench.editor.enablePreviewFromQuickOpen": false,
+  "files.eol": "\n",
+  "window.restoreWindows": "none",
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "/target/**": true
+  },
+  // Editor settings
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "editor.rulers": [80, 100],
+  "editor.lineNumbers": "relative",
+  "editor.cursorStyle": "line",
+  "editor.insertSpaces": false,
+  "editor.wordSeparators": "/\\()\"':,.;<>~!@#$%^&*|+=[]{}`?-",
+  "editor.wordWrap": "off",
+  "editor.quickSuggestions": false,
+  "terminal.integrated.fontSize": 16,
+  "editor.lineHeight": 0,
+  "editor.fontSize": 18,
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  // Terminal settings
+  "terminal.integrated.scrollback": 100000,
+  // Theme settings
+  "workbench.colorTheme": "Monokai Pro (Filter Octagon)",
+  "workbench.iconTheme": "Monokai Pro (Filter Octagon) Icons",
+  // Rust specific settings
+  "[rust]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 4
+  },
+  // JSON with comments settings
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // git settings
+  "git.confirmSync": false,
+  "git.autofetch": true,
+  // Vim settings
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.duration": 650,
+  "vim.easymotion": true,
+  "vim.incsearch": true,
+  "vim.hlsearch": true,
+  "vim.useSystemClipboard": true,
+  "vim.leader": "<Space>",
+  "vim.handleKeys": {
+    "<C-t>": false
+  },
+  "vim.sneakReplacesF": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": ["t", "j"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["t", "k"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    {
+      "before": ["t", "w"],
+      "commands": ["workbench.action.closeActiveEditor"]
+    },
+    {
+      "before": ["<leader>", "z"],
+      "commands": ["workbench.action.toggleZenMode"]
+    },
+    {
+      "before": ["<leader>", "w"],
+      "commands": ["workbench.action.files.save"]
+    },
+    {
+      "before": ["<C-h>"],
+      "commands": [":nohl"]
+    },
+    {
+      "before": ["<leader>", "d"],
+      "commands": ["editor.action.showHover"]
+    },
+    {
+      "before": ["<leader>", "t"],
+      "commands": ["editor.action.peekTypeDefinition"]
+    },
+    {
+      "before": ["<leader>", "g"],
+      "commands": ["editor.action.revealDefinition"]
+    },
+    {
+      "before": ["<leader>", "c"],
+      "commands": ["rust-analyzer.run"]
+    },
+    {
+      "before": ["<c-j>"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<c-k>"],
+      "commands": ["<Esc>"]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["n"],
+      "after": ["n", "z", "z"]
+    },
+    {
+      "before": ["N"],
+      "after": ["N", "z", "z"]
+    }
+  ],
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["<c-j>"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<c-k>"],
+      "commands": ["<Esc>"]
+    }
+  ],
+  "vim.commandLineModeKeyBindings": [
+    {
+      "before": ["<c-j>"],
+      "after": ["<Esc>"]
+    },
+    {
+      "before": ["<c-k>"],
+      "commands": ["<Esc>"]
+    }
+  ],
+  "gitlens.currentLine.enabled": false,
+  "gitlens.hovers.currentLine.over": "line"
+}

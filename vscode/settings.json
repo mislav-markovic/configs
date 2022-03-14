@@ -1,6 +1,11 @@
 {
+  // General Settings
   "workbench.editor.enablePreviewFromQuickOpen": false,
   "files.eol": "\n",
+  "files.associations": {
+    "*.log": "log",
+    "*.bak": "log"
+  },
   "window.restoreWindows": "none",
   "files.watcherExclude": {
     "**/.git/objects/**": true,
@@ -56,6 +61,8 @@
   "vim.handleKeys": {
     "<C-t>": false
   },
+  "vim.smartRelativeLine": true,
+  "vim.sneak": true,
   "vim.sneakReplacesF": true,
   "vim.normalModeKeyBindings": [
     {

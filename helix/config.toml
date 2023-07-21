@@ -1,0 +1,29 @@
+theme = "catppuccin_macchiato"
+
+[editor]
+line-number = "relative"
+mouse = false
+rulers = [80, 120]
+color-modes = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[keys.normal]
+C-s = ":w"
+C-q = ":q!"
+
+[keys.normal."backspace"]
+c = ":config-open"
+w = ":w"
+
+[keys.insert]
+"C-j" = "normal_mode"
+
+[keys.select]
+"C-j" = "normal_mode"

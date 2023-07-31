@@ -513,21 +513,99 @@ let-env config = {
   ]
 }
 
-alias lsexe = (ls *exe | get 0.name)
-alias execp = (lsexe | clip)
-alias pwd = $env.PWD
-alias ppgit = git lg3
-alias shgit = git lg1
-alias olgit = git log --oneline
-alias bgit = git checkout -
+# --- Variable definitions ---
 
+# variable pointing to root of work repo `PumaHost`
 let-env PH_GIT_ROOT = 'C:\git\PumaHost'
+# variable pointing to root of work documentation folder
+let-env VAULT_AVL_WORK_DOCS_ROOT = ('~\Documents\PKM\W - Work\W01 - AVL' | path expand)
 
-alias phroot = cd $env.PH_GIT_ROOT
-alias back = cd -
-alias latest = (ls | sort-by modified | get name)
 
-alias dirs = et --dirs-only --prune --sort size --level 1
+# --- Custom commands ---
 
-oh-my-posh init nu --config ~/AppData/Local/Programs/oh-my-posh/themes/stelbent.minimal.omp.json --print | save --force ~/AppData/Roaming/nushell/.oh-my-posh-cfg.nu
+# Commands for more useful navigation
+module navigations {
+
+  # Format sprint name given as AA.BB.CC (e.g. 23.5.3) as a path to that sprints doc directory
+  def format_path_to_sprint [sprint_in: string] {
+    let split_input = ($sprint_in | split row ".")
+    let year = $split_input.0
+    let iter_num = $split_input.1
+    let sprint_num = $split_input.2
+    let iter_fmt = $'Iteration ($year).($iter_num)'
+    let sprint_fmt = $'Sprint ($year).($iter_num).($sprint_num)'
+    $'($env.VAULT_AVL_WORK_DOCS_ROOT)\Planning\($iter_fmt)\($sprint_fmt)'
+  }
+
+  # Navigate to specified sprint
+  export def-env sprint_dir [
+    sprint_name: string # Navigate to which sprint in format yy.IT.SP (e.g. 23.4.2)
+    --create # switch that tells us to first create dir before moving into it
+  ] {
+    let path_fmt = (format_path_to_sprint $sprint_name)
+    if $create {
+      (mkdir $path_fmt)
+    }
+
+    cd ($'($path_fmt)' | path expand)
+  }
+}
+
+use navigations *
+
+# --- Aliases for current dirs executables ---
+
+# Name of file that has `exe` extension in current directory. If multiple present selects first returend by `ls`
+alias lsexe = (ls *.exe | where type == file | get 0.name)
+# Copy into clipboard result of `lsexe`
+alias execp = (lsexe | clip)
+
+# --- GIT aliases ---
+
+# Pretty pring git history variation `lg3`
+alias ppgit = git lg3
+# Pretty print gi history variation `lg1`
+alias shgit = git lg1
+# Prints concise and simple git history
+alias olgit = git log --oneline
+# Checkout previous branch
+alias bgit = git checkout -
+# Shorthand for showing git status
+alias gs = git status
+# Shorthand for pulling latest changes
+alias gp = git pull --rebase
+
+# --- Directory navigation aliases ---
+
+# Alias for moving into `PumaHost` repository
+alias phroot = z $env.PH_GIT_ROOT
+# Alias for moving into work documentation root
+alias docs = z $env.VAULT_AVL_WORK_DOCS_ROOT
+alias 
+# Alias for moving to dir we came from
+alias back = z -
+# Shorthand for alias `back`
+alias b = back
+# go to provided sprint
+alias sprint = sprint_dir 
+# first make sprint dir then navigate to it
+alias mksprint = sprint_dir --create
+
+# --- Show info about current location ---
+
+# Show location of current dir
+alias pwd = $env.PWD
+# Get name of latest file in current dir
+alias latest = (ls | where type == file | sort-by modified | last | get name)
+# Print tree structure of dirs only with depth 1
+alias dir = et --dirs-only --prune --sort size --level 1
+# Print tree structure of non-empty directories
+alias dirs = et --dirs-only --prune --sort size
+
+# --- Source additioanl configurations ---
+
+# Source oh-my-posh for pretty prompt
 source ~/AppData/Roaming/nushell/.oh-my-posh-cfg.nu
+
+# Source zoxide initialized in env.nu fle to enable `z` as smarter `cd` command
+source ~/.zoxide.nu

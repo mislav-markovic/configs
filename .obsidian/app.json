@@ -1,5 +1,8 @@
 {
   "livePreview": false,
   "showFrontmatter": true,
-  "showLineNumber": true
+  "showLineNumber": true,
+  "newFileLocation": "current",
+  "attachmentFolderPath": "./attachments",
+  "showUnsupportedFiles": true
 }

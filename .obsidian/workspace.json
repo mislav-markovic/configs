@@ -4,15 +4,20 @@
     "type": "split",
     "children": [
       {
-        "id": "5a85b8ebaeb1c2a3",
+        "id": "0d4c623f5b26fba6",
         "type": "tabs",
         "children": [
           {
-            "id": "86f7f59c700ee976",
+            "id": "f63841cdff89c89b",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {}
+              "type": "markdown",
+              "state": {
+                "file": "W - Work/W01 - AVL/Planning/Iteration 23.4/Sprint 23.4.3/23.4.3.md",
+                "mode": "source",
+                "backlinks": true,
+                "source": true
+              }
             }
           }
         ]
@@ -65,7 +70,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 259
   },
   "right": {
     "id": "022748d61d653f84",
@@ -81,6 +86,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "W - Work/W01 - AVL/Planning/Iteration 23.4/Sprint 23.4.3/23.4.3.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -97,6 +103,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "W - Work/W01 - AVL/Planning/Iteration 23.4/Sprint 23.4.3/23.4.3.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -118,7 +125,9 @@
             "type": "leaf",
             "state": {
               "type": "outline",
-              "state": {}
+              "state": {
+                "file": "W - Work/W01 - AVL/Planning/Iteration 23.4/Sprint 23.4.3/23.4.3.md"
+              }
             }
           }
         ]
@@ -138,6 +147,43 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "86f7f59c700ee976",
-  "lastOpenFiles": []
+  "active": "f63841cdff89c89b",
+  "lastOpenFiles": [
+    "S - System/S07 - Templates/S07.W01 AVL Templates/W01.01 Sprint Template.md",
+    "W - Work/W01 - AVL/Planning/Iteration 23.4/Sprint 23.4.3/23.4.3.md",
+    "M - Personal/M95 - Life/Travel/2023-08-16 Copenhagen",
+    "M - Personal/M95 - Life/Travel",
+    "M - Personal/M95 - Life",
+    "M - Personal/M25 - Zettelkasten/Inbox/Deciding on ZK Templates and note types.md",
+    "M - Personal/M25 - Zettelkasten/Inbox/Zettelkasten as journal method.md",
+    "S - System/S07 - Templates/S07.M25 ZK Templates/MK25.03 Literature Template.md",
+    "M - Personal/M25 - Zettelkasten/Hubs",
+    "M - Personal/M25 - Zettelkasten/Permanent",
+    "M - Personal/M25 - Zettelkasten/Inbox",
+    "S - System/S07 - Templates/S07.M25 ZK Templates/M25.02 Permanent Template.md",
+    "S - System/S07 - Templates/S07.M25 ZK Templates/M25.01 Fleeting Template.md",
+    "S - System/S07 - Templates/S07.M25 ZK Templates/MOC Template.md",
+    "S - System/S07 - Templates/S07.M25 ZK Templates/Note Template.md",
+    "S - System/S07 - Templates/S07.M25 ZK Templates/Reference Template.md",
+    "W - Work Related/W01 - AVL/00-09 System/05 Templates/Story Template.md",
+    "W - Work Related/W01 - AVL/00-09 System/05 Templates/Sprint Template.md",
+    "W - Work Related/W01 - AVL/00-09 System/05 Templates/QDar Template.md",
+    "W - Work Related/W01 - AVL/00-09 System/05 Templates/Interview Template.md",
+    "W - Work Related/W01 - AVL/00-09 System/05 Templates/Defect Template.md",
+    "W - Work Related/W01 - AVL/40-49 Management/45 Students",
+    "W - Work Related/W01 - AVL/40-49 Management/44 Scrum",
+    "W - Work Related/W01 - AVL/40-49 Management/43 Onboarding",
+    "W - Work Related/W01 - AVL/40-49 Management/42 Interview Questions",
+    "M - Mislav Personal/M25 - Zettelkasten/10-19 The Method/12 - References/My simple note-taking setup, Zettelkasten in Obsidian, Step-by-step guide.md",
+    "M - Mislav Personal/M25 - Zettelkasten/10-19 The Method/12 - References/Johnny Decimal website.md",
+    "M - Mislav Personal/M25 - Zettelkasten/10-19 The Method/12 - References/Introduction to the Zettelkasten Method.md",
+    "M - Mislav Personal/M25 - Zettelkasten/10-19 The Method/11 - Notes/Organized note-taking journey begins.md",
+    "M - Mislav Personal/M25 - Zettelkasten/00-09 System/05 Templates/Reference Template.md",
+    "M - Mislav Personal/M25 - Zettelkasten/00-09 System/05 Templates/MOC Template.md",
+    "M - Mislav Personal/M25 - Zettelkasten/00-09 System/05 Templates/Note Template.md",
+    "W - Work/W01 - AVL/Planning/Iteration 23.4/Sprint 23.4.3/23.4.4.md",
+    "W - Work/W01 - AVL/Planning/Iteration 23.5/Refinment.md.md",
+    "Untitled.md",
+    "S - System/S07 - Templates/S07.W01 AVL Templates/W01.05 Interview Template.md"
+  ]
 }

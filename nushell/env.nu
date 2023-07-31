@@ -60,3 +60,9 @@ let-env NU_PLUGIN_DIRS = [
 
 # To add entries to PATH (on Windows you might use Path), you can use the following pattern:
 # let-env PATH = ($env.PATH | split row (char esep) | prepend '/some/path')
+
+# Initialize oh-my-posh shell prompt
+oh-my-posh init nu --config ~/AppData/Local/Programs/oh-my-posh/themes/stelbent.minimal.omp.json --print | save --force ~/AppData/Roaming/nushell/.oh-my-posh-cfg.nu
+
+# Initialize zoxide program (better/smater cd)
+zoxide init nushell | save -f ~/.zoxide.nu

@@ -1,0 +1,6 @@
+[shell]
+program = "wsl"
+args = ["~", "-d Ubuntu"]
+
+[font.normal]
+family = "JetBrainsMono Nerd Font Mono"
